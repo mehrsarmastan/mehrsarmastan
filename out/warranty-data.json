@@ -1,0 +1,20 @@
+[
+  {
+    "code": "12345678",
+    "model": "لپ‌تاپ ایسوس",
+    "status": "active",
+    "expireDate": "۱۴۰۵/۰۵/۱۲"
+  },
+  {
+    "code": "87654321",
+    "model": "گوشی سامسونگ",
+    "status": "expired",
+    "expireDate": "۱۴۰۳/۱۱/۰۲"
+  },
+  {
+    "code": "55555555",
+    "model": "کامپیوتر شخصی",
+    "status": "active",
+    "expireDate": "۱۴۰۶/۰۱/۱۵"
+  }
+]
