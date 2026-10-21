@@ -2,99 +2,75 @@ import Link from 'next/link';
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-gray-50 font-sans" dir="rtl">
+    <main style={{ minHeight: '100vh', backgroundColor: '#f9fafb', direction: 'rtl' }}>
       
-      {/* هدر */}
-            <header className="bg-[#1B7A6A] text-white px-6 py-4 flex items-center justify-between shadow-md sticky top-0 z-50">
-        {/* لوگو و اسم - سمت راست */}
-        <Link href="/" className="flex flex-row-reverse items-center gap-3 hover:opacity-90 transition z-10">
-          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md overflow-hidden p-1 shrink-0">
-            <img src="/logo.jpg" alt="لوگو مهر سرمستان" className="w-full h-full object-contain rounded-full" />
-          </div>
-          <div className="text-right">
-            <h1 className="text-xl font-bold">مهر سرمستان</h1>
-            <p className="text-xs opacity-80">نمایندگی رسمی اصفهان</p>
+      <header style={{ backgroundColor: '#1B7A6A', color: 'white', padding: '0.75rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', color: 'white' }}>
+          <img src="/logo.jpg" alt="لوگو" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'white', padding: '3px' }} />
+          <div style={{ textAlign: 'right' }}>
+            <h1 style={{ margin: 0, fontSize: '1.1rem' }}>مهر سرمستان</h1>
+            <p style={{ margin: 0, fontSize: '0.7rem', opacity: 0.8 }}>شعبه اصفهان</p>
           </div>
         </Link>
-
-        {/* منو - سمت چپ */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium">
-          <Link href="/" className="hover:text-[#F5A623] transition">خانه</Link>
-          <Link href="/services" className="hover:text-[#F5A623] transition">خدمات</Link>
-          <Link href="/warranty" className="hover:text-[#F5A623] transition">استعلام گارانتی</Link>
-          <a href="/#branches" className="hover:text-[#F5A623] transition">شعبات</a>
-          <Link href="/contact" className="hover:text-[#F5A623] transition">تماس با ما</Link>
+        <nav style={{ display: 'flex', gap: '1.5rem', fontSize: '0.9rem' }}>
+          <Link href="/" style={{ color: 'white', textDecoration: 'none' }}>خانه</Link>
+          <Link href="/services" style={{ color: 'white', textDecoration: 'none' }}>خدمات</Link>
+          <Link href="/warranty" style={{ color: 'white', textDecoration: 'none' }}>گارانتی</Link>
+            <Link href="/branches" style={{ color: 'white', textDecoration: 'none' }}>شعبات</Link>
+            <Link href="/portfolio" style={{ color: 'white', textDecoration: 'none' }}>نمونه کارها</Link>
+            <Link href="/testimonials" style={{ color: 'white', textDecoration: 'none' }}>نظرات مشتریان</Link>
+            <Link href="/callback" style={{ color: 'white', textDecoration: 'none' }}>درخواست تماس</Link>
+          <Link href="/faq" style={{ color: 'white', textDecoration: 'none' }}>سوالات متداول</Link>
+<Link href="/feedback" style={{ color: 'white', textDecoration: 'none' }}>نظرسنجی</Link>
+<Link href="/about" style={{ color: 'white', textDecoration: 'none' }}>درباره ما</Link>
+<Link href="/callback" style={{ color: 'white', textDecoration: 'none' }}>درخواست تماس</Link>
+<Link href="/contact" style={{ color: 'white', textDecoration: 'none' }}>تماس</Link>
         </nav>
       </header>
 
-      {/* فرم تماس */}
-      <section className="px-6 py-20 max-w-2xl mx-auto">
-        <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100 text-center">
-          <div className="text-5xl mb-6">📞</div>
-          <h2 className="text-3xl font-black text-[#1B7A6A] mb-4">تماس با ما</h2>
-          <p className="text-gray-600 mb-8">سوال یا درخواستی دارید؟ فرم زیر را پر کنید یا با ما تماس بگیرید.</p>
+      <section style={{ padding: '3rem 1rem', maxWidth: '800px', margin: '0 auto' }}>
+        <div style={{ backgroundColor: 'white', padding: '2rem', borderRadius: '1rem', textAlign: 'center', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
+          <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📞</div>
+          <h2 style={{ fontSize: '1.8rem', color: '#1B7A6A', marginBottom: '1rem' }}>تماس با ما</h2>
+          <p style={{ color: '#4b5563', marginBottom: '2rem' }}>سوال یا درخواستی دارید؟ فرم زیر را پر کنید یا با ما تماس بگیرید.</p>
           
-          <form className="flex flex-col gap-4 text-right">
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'right' }}>
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-2">نام و نام خانوادگی</label>
-              <input type="text" placeholder="نام شما" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#E8941A] focus:ring-2 focus:ring-[#E8941A]/20" />
+              <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>نام و نام خانوادگی</label>
+              <input type="text" placeholder="نام شما" style={{ width: '100%', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #d1d5db', boxSizing: 'border-box' }} />
             </div>
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-2">شماره تماس</label>
-              <input type="tel" placeholder="مثلاً: ۰۹۱۲۳۴۵۶۷۸۹" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#E8941A] focus:ring-2 focus:ring-[#E8941A]/20 font-mono" />
+              <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>شماره تماس</label>
+              <input type="tel" placeholder="مثلاً: ۰۹۱۲۳۴۵۶۷۸۹" style={{ width: '100%', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #d1d5db', boxSizing: 'border-box' }} />
             </div>
             <div>
-              <label className="block text-sm font-bold text-gray-700 mb-2">پیام شما</label>
-              <textarea rows="4" placeholder="متن پیام..." className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-[#E8941A] focus:ring-2 focus:ring-[#E8941A]/20"></textarea>
+              <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>پیام شما</label>
+              <textarea rows="4" placeholder="متن پیام..." style={{ width: '100%', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #d1d5db', boxSizing: 'border-box' }}></textarea>
             </div>
-            <button type="button" className="w-full bg-[#1B7A6A] hover:bg-[#145f52] text-white font-bold px-8 py-4 rounded-xl text-lg transition mt-2">
+            <button type="button" style={{ width: '100%', backgroundColor: '#1B7A6A', color: 'white', fontWeight: 'bold', padding: '1rem', borderRadius: '0.5rem', border: 'none', cursor: 'pointer' }}>
               ارسال پیام
             </button>
           </form>
 
-          {/* اطلاعات تماس - فقط یک بار */}
-          <div className="mt-10 pt-6 border-t border-gray-200">
-            <div className="text-center mb-6">
-              <h3 className="text-xl font-bold text-[#1B7A6A]">اطلاعات تماس ما</h3>
-            </div>
-
-            <div className="text-right mb-6 bg-gray-50 p-4 rounded-xl">
-              <p className="text-sm font-bold text-gray-700 mb-1">📍 آدرس دفتر اصفهان:</p>
-              <p className="text-gray-600">اصفهان، خیابان طالقانی، بازار بزرگ طالقانی، طبقه دوم، واحد ۱۶۰</p>
-            </div>
-            
-            <p className="text-sm font-bold text-gray-700 mb-2 text-right">📞 تلفن‌های تماس (سیستم ویپ):</p>
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-4">
-              
-              <div className="flex justify-between flex-row-reverse py-3 px-4 border-b border-gray-100 hover:bg-gray-50 transition">
-                <span className="font-bold text-[#1B7A6A] font-mono" dir="ltr">021-4328 (255-256)</span>
-                <span className="text-gray-700">داخلی واحد پذیرش</span>
-              </div>
-              
-              <div className="flex justify-between flex-row-reverse py-3 px-4 border-b border-gray-100 hover:bg-gray-50 transition">
-                <span className="font-bold text-[#1B7A6A] font-mono" dir="ltr">021-4328 (253-254)</span>
-                <span className="text-gray-700">داخلی واحد پذیرش</span>
-              </div>
-              
-              <div className="flex justify-between flex-row-reverse py-3 px-4 hover:bg-gray-50 transition">
-                <span className="font-bold text-[#1B7A6A] font-mono" dir="ltr">021-4328 (257-258)</span>
-                <span className="text-gray-700">داخلی بخش فنی</span>
-              </div>
-
-            </div>
-            
-            <p className="text-xs text-gray-400 text-center">*(پس از تماس با شماره اصلی، کد داخلی مورد نظر خود را وارد کنید)*</p>
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e5e7eb', textAlign: 'right' }}>
+            <h3 style={{ fontSize: '1.2rem', color: '#1B7A6A', marginBottom: '1rem', textAlign: 'center' }}>اطلاعات تماس ما</h3>
+            <p style={{ marginBottom: '1rem' }}><strong>آدرس:</strong> اصفهان، خیابان طالقانی، بازار بزرگ طالقانی، طبقه دوم، واحد ۱۶۰</p>
+            <p style={{ marginBottom: '0.5rem' }}><strong>تلفن‌های تماس (سیستم ویپ):</strong></p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between' }}><span>داخلی واحد پذیرش:</span> <span style={{ fontFamily: 'monospace' }} dir="ltr">021-4328 (255-256)</span></li>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between' }}><span>داخلی واحد پذیرش:</span> <span style={{ fontFamily: 'monospace' }} dir="ltr">021-4328 (253-254)</span></li>
+              <li style={{ padding: '0.5rem 0', display: 'flex', justifyContent: 'space-between' }}><span>داخلی بخش فنی:</span> <span style={{ fontFamily: 'monospace' }} dir="ltr">021-4328 (257-258)</span></li>
+            </ul>
           </div>
         </div>
       </section>
-            {/* فوتر */}
-      <footer className="bg-[#1B7A6A] text-white text-center py-8 mt-12">
-        <p className="text-sm opacity-80 mb-4">© ۱۴۰۴ شرکت خدماتی و تجاری مهر سرمستان - تمامی حقوق محفوظ است.</p>
-        
-        <div className="mt-4 pt-4 border-t border-[#ffffff30] text-xs flex justify-center gap-4">
-          <Link href="/admin" className="hover:text-[#F5A623] transition text-white/70">پنل مدیریت انبار</Link>
-          <span className="text-white/30">|</span>
-          <Link href="/tickets" className="hover:text-[#F5A623] transition text-white/70">سیستم تعمیرات</Link>
+
+            <footer style={{ backgroundColor: '#1B7A6A', color: 'white', textAlign: 'center', padding: '2rem', marginTop: '3rem' }}>
+        <p style={{ margin: 0, marginBottom: '1rem', opacity: 0.8 }}>© ۱۴۰۴ شرکت خدماتی و تجاری مهر سرمستان</p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', fontSize: '0.8rem', borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '1rem' }}>
+          <Link href="/admin" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>ورود به پنل مدیریت</Link>
+          <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
+          <Link href="/tickets" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>سیستم تعمیرات</Link>
         </div>
       </footer>
     </main>
